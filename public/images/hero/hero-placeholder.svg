@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1125" viewBox="0 0 900 1125" role="img" aria-label="HERO — PLACEHOLDER">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#0B0B0D"/>
+  <stop offset="1" stop-color="#151519"/>
+</linearGradient>
+<radialGradient id="halo" cx="0.5" cy="0.42" r="0.55">
+  <stop offset="0" stop-color="#FF6B35" stop-opacity="0.5"/>
+  <stop offset="1" stop-color="#FF6B35" stop-opacity="0"/>
+</radialGradient></defs>
+
+<rect width="900" height="1125" fill="url(#bg)"/>
+<rect width="900" height="1125" fill="url(#halo)"/>
+<g opacity="0.55">
+  <ellipse cx="450" cy="450" rx="306" ry="108" fill="none" stroke="#5DE2E7" stroke-width="1.5" transform="rotate(-18 450 450)"/>
+  <circle cx="720" cy="405" r="6" fill="#FF6B35"/>
+</g>
+<g fill="#232329">
+  <circle cx="450" cy="450" r="144"/>
+  <path d="M 162 1125 L 162 877.5 Q 162 720 342 697.5 L 558 697.5 Q 738 720 738 877.5 L 738 1125 Z"/>
+</g>
+<circle cx="162" cy="225" r="2.5" fill="#FFD166" opacity="0.7"/>
+<circle cx="738" cy="337.5" r="2" fill="#5DE2E7" opacity="0.6"/>
+<circle cx="630" cy="157.50000000000003" r="1.6" fill="#F3EFE6" opacity="0.5"/>
+<text x="450" y="1085" fill="rgba(243,239,230,0.55)" opacity="1" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="20" font-weight="500" letter-spacing="6" text-anchor="middle">HERO — PLACEHOLDER</text>
+</svg>
