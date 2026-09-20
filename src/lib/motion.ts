@@ -38,6 +38,15 @@ export function useInView<T extends Element>(options?: InViewOptions) {
       setInView(true);
       return;
     }
+    // Synchronous first check: if the element is already in the viewport,
+    // reveal it immediately so it can never get stuck hidden if the
+    // observer callback is slow or never fires.
+    const rect = el.getBoundingClientRect();
+    const vh = window.innerHeight || document.documentElement.clientHeight || 0;
+    if (rect.width > 0 && rect.height > 0 && rect.top < vh && rect.bottom > 0) {
+      setInView(true);
+      if (once) return;
+    }
     const obs = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
