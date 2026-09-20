@@ -5,6 +5,8 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://vite.dev/config/
 export default defineConfig({
+  // GitHub Pages: site is served from https://Manvendra186.github.io/adwik-portfolio/
+  base: "/adwik-portfolio/",
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {

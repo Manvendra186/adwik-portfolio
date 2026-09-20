@@ -15,8 +15,11 @@ export interface MediaAsset {
   placeholder?: boolean;
 }
 
+/** Resolve a public/ asset path against the deploy base (e.g. /adwik-portfolio/ on GitHub Pages). */
+const asset = (path: string): string => `${import.meta.env.BASE_URL}${path}`;
+
 const cert = (n: number): MediaAsset => ({
-  src: `/images/certificates/cert-${n.toString().padStart(2, "0")}.jpeg`,
+  src: asset(`images/certificates/cert-${n.toString().padStart(2, "0")}.jpeg`),
   alt: `Certificate ${n}`,
   title: `Certificate ${n}`,
   orientation: "portrait",
@@ -31,7 +34,7 @@ export const media: {
   certificates: MediaAsset[];
 } = {
   hero: {
-    src: "/images/photos/AdwikPhoto.jpeg",
+    src: asset("images/photos/AdwikPhoto.jpeg"),
     alt: "Adwik Singh",
     orientation: "portrait",
     category: "hero",
@@ -40,7 +43,7 @@ export const media: {
     placeholder: false,
   },
   portrait: {
-    src: "/images/photos/AdwikPhoto.jpeg",
+    src: asset("images/photos/AdwikPhoto.jpeg"),
     alt: "Adwik Singh",
     orientation: "portrait",
     category: "portrait",
